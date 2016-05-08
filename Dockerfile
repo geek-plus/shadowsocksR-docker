@@ -1,12 +1,12 @@
-FROM ubuntu:xenial
+FROM debian:8.4
 MAINTAINER slanterns <slanterns.w@gmail.com>
 
-RUN ["apt", "update"]
-RUN ["apt", "upgrade", "-y"]
+RUN ["apt-get", "update"]
+RUN ["apt-get", "upgrade", "-y"]
 #当心缓存机制
 
 #基本库安装
-RUN ["apt", "install", "m2crypto", "git", "build-essential", "-y"]
+RUN ["apt-get", "install", "m2crypto", "git", "build-essential", "-y"]
 ADD libsodium-1.0.10.tar.gz /
 RUN cd libsodium-1.0.10 && ./configure && make -j2 && make install && ldconfig
 #经验：要记住，上一行的cd对下一行毫无用处，会重新运行上一行所提交的镜像，于是又回到/了
