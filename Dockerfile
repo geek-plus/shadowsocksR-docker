@@ -2,8 +2,7 @@ FROM ubuntu:16.04
 #还是比Debian稍微激进点的发行版吧
 MAINTAINER slanterns <slanterns.w@gmail.com>
 
-RUN ["apt", "update"]
-RUN ["apt", "upgrade", "-y"]
+RUN apt update && apt upgrade -y
 #当心缓存机制
 
 #基本库安装
