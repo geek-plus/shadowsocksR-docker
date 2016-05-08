@@ -22,6 +22,6 @@ COPY run.sh /
 RUN chmod +x run.sh
 EXPOSE 443
 
-CMD ["./run.sh"]
+CMD <./run.sh>
 
 #Thank clowwindy,breakwa11,PeterCxy and all other shadowsocks project maintains.
