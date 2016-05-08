@@ -8,7 +8,7 @@ RUN apt upgrade -y
 #基本库安装
 RUN apt install m2crypto git -y
 RUN apt install build-essential -y
-ADD https://github.com/jedisct1/libsodium/releases/download/1.0.10/libsodium-1.0.10.tar.gz /
+ADD libsodium-1.0.10.tar.gz /
 RUN cd libsodium-1.0.10
 RUN ./configure && make -j2 && make install
 RUN ldconfig
