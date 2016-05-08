@@ -9,7 +9,8 @@ RUN apt upgrade -y
 RUN apt install m2crypto git -y
 RUN apt install build-essential -y
 ADD libsodium-1.0.10.tar.gz /
-RUN cd libsodium-1.0.10 && ./configure && make -j2 && make install && ldconfig #经验：要记住，上一行的cd对下一行毫无用处，会重新运行上一行所提交的镜像，于是又回到/了
+RUN cd libsodium-1.0.10 && ./configure && make -j2 && make install && ldconfig
+#经验：要记住，上一行的cd对下一行毫无用处，会重新运行上一行所提交的镜像，于是又回到/了
 
 #获取源代码
 RUN mkdir shadowsocksR
