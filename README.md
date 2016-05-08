@@ -1,3 +1,5 @@
+# 用vultr上的docker试试
+
 ## shadowsocksR-docker
 ---
 实现很暴力，很不优雅
