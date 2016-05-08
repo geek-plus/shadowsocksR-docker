@@ -1,7 +1,7 @@
 var
 password,method,protocol,obfs,redirect,dns_ipv6:string;
 begin
-assign(output,'/etc/shadowsocks.json');
+assign(output,'/shadowsocksR/shadowsocks/shadowsocks/shadowsocks.json');
 rewrite(output);      //1、防止反复在文件尾写入；2、防止环境变量更改后配置文件不改变；
 //以下均不能读入空串！（输入一个空串=未输入）
 readln(password);     //e.g. mypassword
