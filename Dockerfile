@@ -20,6 +20,7 @@ RUN cd shadowsocksR && git clone -b manyuser https://github.com/breakwa11/shadow
 COPY configurer /shadowsocksR/
 COPY run.sh /
 RUN chmod +x run.sh
+EXPOSE 443
 
 CMD ["./run.sh"]
 
