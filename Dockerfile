@@ -10,7 +10,7 @@ RUN apt install m2crypto git -y
 RUN apt install build-essential -y
 COPY libsodium-1.0.10.tar.gz /
 RUN tar xf libsodium-1.0.10.tar.gz && cd libsodium-1.0.10
-RUN ./configure && make -j2 && make install
+RUN <./configure && make -j2 && make install>
 RUN ldconfig
 
 #获取源代码
