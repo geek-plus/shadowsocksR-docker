@@ -42,4 +42,5 @@ EXPOSE 443
 
 CMD ./run.sh
 
-#Thank clowwindy,breakwa11,PeterCxy and all other shadowsocks project maintains.
+#Thank clowwindy,breakwa11 and all other shadowsocks project maintains.
+#Thank PeterCxy.
