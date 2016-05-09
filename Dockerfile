@@ -28,13 +28,6 @@ RUN apt install build-essential -y \
     && apt remove build-essential -y \
     && apt autoremove -y
 
-
-RUN cd /shadowsocksR/libsodium-1.0.10 \
-    && ./configure \
-    && make -j2 \
-    && make install \
-    && ldconfig
-
 #获取源代码
 RUN apt install git -y \
     && cd shadowsocksR \
