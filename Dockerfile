@@ -5,7 +5,7 @@ MAINTAINER slanterns <slanterns.w@gmail.com>
 #当心缓存机制
 RUN apt update \
     && apt upgrade -y \
-    && apt install m2crypto python3 -y
+    && apt install m2crypto -y
 
 
 RUN ["mkdir", "shadowsocksR"]
