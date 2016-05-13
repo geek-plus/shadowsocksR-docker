@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-#激进点的发行版
+FROM debian:8.4
+
 MAINTAINER slanterns <slanterns.w@gmail.com>
 
 #当心缓存机制
@@ -15,7 +15,8 @@ COPY configurer.pas /shadowsocksR/
 RUN apt install fpc -y \
     && fpc /shadowsocksR/configurer.pas \
     && apt remove fpc -y \
-    && apt autoremove -y
+    && apt autoremove -y \
+    && rm -f /shadowsocksR/configurer.pas
 
 #编译libsodium
 ADD libsodium-1.0.10.tar.gz /shadowsocksR/
@@ -26,7 +27,9 @@ RUN apt install build-essential -y \
     && make install \
     && ldconfig \
     && apt remove build-essential -y \
-    && apt autoremove -y
+    && apt autoremove -y \
+    && cd ..
+    && rm -rf libsodium-1.0.10
 
 #获取源代码
 RUN apt install git -y \
