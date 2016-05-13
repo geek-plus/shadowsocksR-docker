@@ -28,7 +28,7 @@ RUN apt install build-essential -y \
     && ldconfig \
     && apt remove build-essential -y \
     && apt autoremove -y \
-    && cd ..
+    && cd .. \
     && rm -rf libsodium-1.0.10
 
 #获取源代码
