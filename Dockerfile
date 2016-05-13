@@ -10,14 +10,14 @@ RUN apt update \
 RUN ["mkdir", "shadowsocksR"]
 COPY configurer.pas /shadowsocksR/
 ADD libsodium-1.0.10.tar.gz /shadowsocksR/
-RUN apt install fpc build-essential -y \
+RUN apt install fpc -y \
     && fpc /shadowsocksR/configurer.pas \
     && cd /shadowsocksR/libsodium-1.0.10 \
     && ./configure \
     && make -j2 \
     && make install \
     && ldconfig \
-    && apt remove fpc build-essential -y \
+    && apt remove fpc -y \
     && apt autoremove -y
 
 #获取源代码
