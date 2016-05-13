@@ -25,5 +25,5 @@ writeln('    "redirect": "",');
 writeln('    "dns_ipv6": false,');
 writeln('    "fast_open": false,');
 writeln('    "workers": 1');
-write('}');
+write('}')
 end.
