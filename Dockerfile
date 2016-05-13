@@ -1,4 +1,4 @@
-FROM debian:8.4
+FROM ubuntu:16.04
 
 MAINTAINER slanterns <slanterns.w@gmail.com>
 
