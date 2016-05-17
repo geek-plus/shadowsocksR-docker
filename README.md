@@ -30,30 +30,18 @@
 
 &ensp;
 
+&ensp;
+
+&ensp;
+
+&ensp;
+
 >May you do good and not evil.
 
 >May you find forgiveness for yourself and forgive others.
 
 >May you share freely, never taking more than you give.
  
----
-
-&ensp;
-
-&ensp;
-
-&ensp;
-
-&ensp;
-
-&ensp;
-
-&ensp;
-
-&ensp;
-
-&ensp;
+and
 
 >Choose your own way.
-
-It's my way.
